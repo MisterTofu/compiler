@@ -1,0 +1,10 @@
+#!/bin/bash
+
+bison -d prog.y
+
+flex tokens.l
+
+g++ prog.tab.c lex.yy.c -lfl -o prog
+
+open prog
+
